@@ -76,7 +76,31 @@ function appendTableRow5(tableobj, col1, col2, col3, col4, col5) {
 // Use table03A to create table3B. Create new functions as in item 2, above. 
 // in table3B, add a column, "Price * Qty", and use JS to compute the correct values to put in the column
 // add to table03B a "totals" row which gives the "grand total" of all numbers in the "Price * Qty" column
-
+let div3B = document.getElementById("3B");
+let table3B = createTable("table3B");
+dive3B.appendChild(table3B);
+table3B.setAttribute("style", "border: 1");
+table3B.setAttribute("width", "100%");
+appendTableRow4(table3B, "Item", "Price", "Quantity", "Price * Quantity");
+appendtableRow4(table3B, "Thingamabob", "1.00", "1", (1.00 * 1);
+appendtableRow4(table3B, "Whachamacallit", "2.00", "2", (2.00 * 2);
+appendtableRow4(table3B, "Doohickey", "3.00", "3", (3.00 * 3);
+function appendTableRow4 (tableobj, col1, col2, col3, col4) {
+    let td1 = document.createElement("td");
+	let td2 = document.createElement("td");
+	let td3 = document.createElement("td");
+	let td4 = document.createElement("td");
+	td1.innerHTML = col1;
+	td2.innerHTML = col2;
+	td3.innerHTML = col3;
+	td4.innerHTML = col4;
+	let tr = document.createElement("tr");
+	tr.appendChild(td1);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	tr.appendChild(td4);
+	tableobj.children[0].appendChild(tr);
+}
 
 // 9. Refactor a non-object-oriented form
 <!-- code below is from: https://www.guru99.com/practical-code-examples-using-javascript.html -->
