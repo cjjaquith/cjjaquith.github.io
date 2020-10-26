@@ -77,7 +77,7 @@ function appendTableRow5(tableobj, col1, col2, col3, col4, col5) {
 // in table3B, add a column, "Price * Qty", and use JS to compute the correct values to put in the column
 // add to table03B a "totals" row which gives the "grand total" of all numbers in the "Price * Qty" column
 let div3b = document.getElementById("3B");
-let table3b = createTable("table3B");
+let table3b = document.getElementById("table03A");
 dive3b.appendChild(table3b);
 table3b.setAttribute("style", "border:1 px solid black");
 table3b.setAttribute("width", "100%");
