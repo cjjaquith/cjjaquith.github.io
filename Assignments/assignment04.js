@@ -79,7 +79,7 @@ function appendTableRow5(tableobj, col1, col2, col3, col4, col5) {
 let div3B = document.getElementById("3B");
 let table3B = createTable("table3B");
 dive3B.appendChild(table3B);
-table3B.setAttribute("style", "border: 1");
+table3B.setAttribute("style", "border:1 px solid black");
 table3B.setAttribute("width", "100%");
 appendTableRow4(table3B, "Item", "Price", "Quantity", "Price * Quantity");
 appendtableRow4(table3B, "Thingamabob", "1.00", "1", (1.00 * 1);
