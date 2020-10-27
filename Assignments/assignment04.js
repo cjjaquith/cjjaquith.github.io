@@ -76,15 +76,16 @@ function appendTableRow5(tableobj, col1, col2, col3, col4, col5) {
 // Use table03A to create table3B. Create new functions as in item 2, above. 
 // in table3B, add a column, "Price * Qty", and use JS to compute the correct values to put in the column
 // add to table03B a "totals" row which gives the "grand total" of all numbers in the "Price * Qty" column
-let div3b = document.getElementById("3B");
+let table3B = document.getElementById("3B");
 let table3b = createTable("table3b");
-dive3b.appendChild(table3b);
-table3b.setAttribute("style", "border:1 px solid black");
-table3b.setAttribute("width", "100%");
+table3B.appendChild(table3b);
+table3B.setAttribute("style", "border: 1px solid black");
+table3B.setAttribute("width", "100%");
 appendTableRow4(table3b, "Item", "Price", "Quantity", "Price * Quantity");
-appendtableRow4(table3b, "Thingamabob", "1.00", "1", (1.00 * 1);
-appendtableRow4(table3b, "Whachamacallit", "2.00", "2", (2.00 * 2);
-appendtableRow4(table3b, "Doohickey", "3.00", "3", (3.00 * 3);
+appendTableRow4(table3b, "Thingamabob", "1.00", "1", (1.00 * 1);
+appendTableRow4(table3b, "Whachamacallit", "2.00", "2", (2.00 * 2);
+appendTableRow4(table3b, "Doohickey", "3.00", "3", (3.00 * 3);
+appendTableRow4(table3b, "Totals", "", "", ((1.00 * 1) + (2.00 * 2) + (3.00 * 3)));
 function appendTableRow4 (tableobj, co1, co2, co3, co4) {
     let td1 = document.createElement("td");
 	let td2 = document.createElement("td");
