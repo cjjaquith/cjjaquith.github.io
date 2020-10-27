@@ -82,9 +82,9 @@ table3B.appendChild(table3b);
 table3B.setAttribute("style", "border: 1px solid black");
 table3B.setAttribute("width", "100%");
 appendTableRow4(table3b, "Item", "Price", "Quantity", "Price * Quantity");
-appendTableRow4(table3b, "Thingamabob", "1.00", "1", (1.00 * 1);
-appendTableRow4(table3b, "Whachamacallit", "2.00", "2", (2.00 * 2);
-appendTableRow4(table3b, "Doohickey", "3.00", "3", (3.00 * 3);
+appendTableRow4(table3b, "Thingamabob", "1.00", "1", (1.00 * 1));
+appendTableRow4(table3b, "Whachamacallit", "2.00", "2", (2.00 * 2));
+appendTableRow4(table3b, "Doohickey", "3.00", "3", (3.00 * 3));
 appendTableRow4(table3b, "Totals", "", "", ((1.00 * 1) + (2.00 * 2) + (3.00 * 3)));
 function appendTableRow4 (tableobj, co1, co2, co3, co4) {
     let td1 = document.createElement("td");
