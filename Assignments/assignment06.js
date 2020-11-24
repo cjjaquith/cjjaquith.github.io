@@ -11,14 +11,15 @@ let loanWithInterest = 0;
 let int = 0;
 let payments;
 
+// plain javascrpit functions
 let toMoney = (value) => {
 	return '\$${toComma)value.toFixed(2))}';
 }
-
+// saving the form in loalStorage
 let saveForm = () => {
 	localStorage.setItem('assignment06', JSON.stringify(loans));
 }
-
+// retrieving the form from localStorage
 let loadForm = () => {
 	if(localStorage.getItem('assignment06') != null){
 		loans = JSON.parse(localStorage.getItem('assignment06'));
@@ -32,8 +33,9 @@ let loadForm = () => {
 
 // --- function: loadDoc() ---
 
-function loadDoc() {
-
+//function loadDoc() {
+$(document).ready(function() {
+  // Replaced the document.getElementById with JQuery statements
   
   // pre-fill defaults for first loan year
   let defaultYear = loans[0].loan_year;
@@ -79,7 +81,7 @@ function loadDoc() {
 function toComma(value) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
+// checking and validating for a number value
 function updateLoansArray() {
   let yearP = /^(19|20)|d{2}$/;
   let amtP = /^([1-9][0-9]*)+(.[0-9]{1,2})?$/;
@@ -114,6 +116,7 @@ function updateLoansArray() {
  }
  updateForm();
 }
+// updating the form
 let updateForm = () => {
   loanWithInterest = 0;
   let totalAmt = 0;
@@ -132,6 +135,7 @@ let updateForm = () => {
   $("#loan_int_accrued").text(toMoney(int));
   
 }
+// added Angular
 let app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope) {
@@ -139,7 +143,7 @@ app.controller('myCtrl', function($scope) {
   $scope.populate = function () {
     
     updateForm();
-    
+    // setting up for the calculations
     let total = loanWithInterest;
     let iRate = loans[0].loan_int_rate;
     let r = iRate / 12;
