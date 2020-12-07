@@ -45,7 +45,7 @@ $(document).ready(function() {
   let defaultInterestRate = loans[0].loan_int_rate;
   $("#loan_int0" + 1).val(defaultInterestRate);
   let loanWithInterest = loans[0].loan_amount * (1 + loans[0].loan_int_rate);
-  $("#loan_bal0" + 1).text(toMoney(loanWithInterest);
+  $("#loan_bal0" + 1).text(toMoney(loanWithInterest));
   
   // pre-fill defaults for other loan years
   for(let i=2; i<6; i++) {
