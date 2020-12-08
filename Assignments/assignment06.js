@@ -57,7 +57,7 @@ $(document).ready(function() {
     $("#loan_int0${i}").attr("disabled", "true");
     $("#loan_int0${i}").css({"backgroundColor": "grey", "color": "white"});
    loanWithInterest = (loanWithInterest + defaultLoanAmount) * (1 + defaultInterestRate);
-   $("#loan_bal0" + i).text(toMoney(loanWithInterest.toFixed(2));
+   $("#loan_bal0" + i).text(toMoney(loanWithInterest.toFixed(2)));
     } // end: "for" loop
   
   // all input fields: select contents on fucus
